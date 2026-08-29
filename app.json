@@ -1,42 +1,39 @@
 {
   "expo": {
-    "name": "elevation-survey",
+    "name": "Elevation Survey",
     "slug": "elevation-survey",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "elevationsurvey",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "supportsTablet": false,
+      "bundleIdentifier": "com.brycaqss.elevationsurvey"
     },
     "android": {
+      "package": "com.brycaqss.elevationsurvey",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#0a1628"
       },
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "HIGH_SAMPLING_RATE_SENSORS",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "expo-location",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "locationAlwaysAndWhenInUsePermission": "Allow Elevation Survey to use your location for GPS altitude reference."
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+    "extra": {
+      "eas": {
+        "projectId": "e3aaf273-331c-42cf-b91c-c1839d0323fe"
+      }
     }
   }
 }
